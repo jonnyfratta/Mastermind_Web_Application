@@ -1,0 +1,128 @@
+#mod {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed; 
+    top: 5.5rem;
+    right: 0.5rem;
+
+    width: 285.6px; 
+    height: 267px;
+    background-image: url(../PNG/FOGLI/FOGLIO_LOGIN2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    border: 3px solid #2a2a27;
+    box-shadow: 8px 8px 3px #c9af85;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 59px 176px 34px;
+}
+
+#close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    padding: 0;
+    margin: 0 5px;
+    background: none;
+    font-size: 16px;
+    font-weight: bold;
+    height: 19px;
+    color: grey;
+}
+#close:hover{
+    color: #e26d5c;
+}
+
+#welcome {
+    margin: 22px 10px 1px;
+    line-height: 19px;
+    grid-column: span 2;
+    font-family: 'Comic Neue', cursive;
+    font-size: 16pt;
+    font-weight: 700;
+}
+
+#loginForm{
+    margin-top: 2px;
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(9, 19.7px);
+    align-items: end;
+}
+
+#pwLabel, #password{
+    grid-row: 3/4;
+}
+#usernameLabel, #pwLabel{
+    margin-left: 15px;
+    white-space: nowrap;
+    font-family: 'Comic Neue', cursive;
+    font-size: 14pt;
+    font-weight: 500;
+}
+#username, #password {
+    border: 0;
+    border-bottom: 2px solid #2a2a27;
+    width: 80%;
+    height: 70%;
+    justify-self: center;
+
+    font-family: 'Comic Neue', cursive;
+    font-size: 10pt;
+    font-style: italic;
+    font-weight: 400;
+}
+#username:focus,
+#password:focus {
+    border-bottom: 2px solid #2a2a27;
+    outline: none;
+}
+
+#log{
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    grid-column: 1/2;
+    color: #64a6bd;
+
+    font-family: 'Comic Neue', cursive;
+    font-size: 18pt;
+    font-weight: 600;
+    display: flex;
+    align-items: flex-end;
+}
+
+#reg{
+    grid-row: 7/8;
+    grid-column: 2/3;
+    color: #2a2a27;
+    
+    font-family: 'Comic Neue', cursive;
+    font-size: 16pt;
+    font-style: italic;
+    font-weight: 500;
+}
+#log, #reg{
+    grid-row: 7/8;
+    justify-self: center;
+    line-height: 19px;
+}
+
+#msg{
+    grid-row: 5/6;
+    grid-column: span 2;
+    justify-self: center;
+    align-self: end;
+    color: #e26d5c;
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+}
+

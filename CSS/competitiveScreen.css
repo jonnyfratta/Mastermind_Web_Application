@@ -1,0 +1,109 @@
+.choice{
+    visibility: hidden;
+    opacity: 0; 
+
+    position: absolute; 
+    top: 15rem;
+    left: 26rem;
+}
+#streakView, #scoreView{
+    border: none;
+    margin-bottom: 3.5rem;
+    cursor: pointer;
+    
+    font-family: 'Comic Neue', cursive;
+    font-size: 11pt;
+    font-weight: 500;
+}
+
+#scoreView{
+    position: relative;
+    left: 3.1rem;
+
+    background-image: url(../PNG/GRAFICHE/VERIFICA_TASTO.png);
+    background-position: center;
+    background-size: cover;
+    border: 1px solid #2a2a27;
+    border-radius: 6px;
+    transform: rotate(-8deg);
+    width: 110px;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; 
+    box-shadow: 5px 5px 5px #c9af85;
+}
+#streakView{
+    position: relative;
+    top: -3.2rem;
+    left: 2.5rem;
+
+    background-image: url(../PNG/GRAFICHE/CANCELLA_TASTO.png);
+    background-position: center;
+    background-size: cover;
+    border: 1px solid #2a2a27;
+    border-radius: 10px;
+    transform: rotate(10deg);
+    width: 120px;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 5px 5px 3px #c9af85;
+}
+
+#scoreView.clicked,
+#streakView.clicked {
+    font-family: 'Comic Neue', cursive;
+    font-size: 13pt;
+    font-weight: 700;
+}
+#leaderboard{
+  top: 8.3rem;
+  left: 4.5rem;
+  box-shadow: 5px 5px 6px #5d5d54;
+}
+
+.highlighted{
+  color: #e26d5c;
+  font-weight: 700;
+}
+
+.display{
+    position: relative;
+    top: 11.4rem;
+    left: 1.3rem;
+    display: grid;
+    grid-template-areas: 
+    "lvT    lv"
+    "ptT    pt";
+    grid-template-rows: 34.5px 17.5px;
+    justify-content: start;
+
+    width: 100px;
+    font-family: 'Comic Neue', cursive;
+    font-size: 13pt;
+    font-weight: 500;
+    cursor: default;
+}
+#levelText{
+    grid-area: lvT;
+    justify-self: start;
+}
+#level{
+    grid-area: lv;
+    padding-left: 15px;
+}
+#pointsText{
+    grid-area: ptT;
+}
+#points{
+    grid-area: pt;
+    padding-left: 15px;
+}
+
+.ingame {
+  top: 18.5rem;
+  left: 7.35rem;
+  transform: rotate(13.5deg);
+}

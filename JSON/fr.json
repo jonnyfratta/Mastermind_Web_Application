@@ -1,0 +1,112 @@
+{
+    "single": "Partie Simple",
+    "compet": "Mode Compétitif",
+    "custom": "Mode Personnalisé",
+    "rules": "Règles",
+
+    "combLabel": "Activer plusieurs instances de la même couleur dans la combinaison",
+    "reset": "Redémarrer",
+    "start": "Démarrer le jeu",
+    "check": "Vérifier",
+    "clear": "Effacer",
+    "scoreView": "Par Score",
+    "streakView": "Par Série",
+    "rowLabel": "Nombre de Tentatives",
+    "columnLabel": "Nombre de Couleurs dans la Combinaison",
+    "case1": "1 couleur correcte à la bonne position",
+    "case2": "1 couleur correcte à la mauvaise position",
+
+
+    "fullRules": "Le Mastermind est un jeu de logique où traditionnellement deux joueurs se relaient dans les rôles de Codeur et Décodeur. Le Codeur choisit et cache le code secret, tandis que le Décodeur tente de le deviner. Dans cette version numérique, l'ordinateur est le Codeur, et vous assumez le rôle de Décodeur.\n\nLe but du jeu est de deviner le Code Secret en le moins de tentatives possible, généralement composé de quatre jetons colorés. Le Décodeur propose des tentatives avec des codes colorés, et le Codeur fournit des jetons clés blancs et noirs pour chaque tentative.\n\nLes règles des jetons clés sont les suivantes :\n  - Les jetons noirs indiquent les couleurs du Code tentatif présentes dans le Code Secret à la position correcte.\n  - Les jetons blancs indiquent les couleurs présentes dans le Code Secret mais à la position incorrecte.\n  - Aucun jeton clé pour les couleurs du code joué non présentes dans le Code Secret.\n\nIl est important de noter que les jetons blancs et noirs indiquent seulement la quantité de jetons colorés présents dans le Code Secret, pas leur position. Pour éviter les erreurs avec les couleurs répétées, le Codeur place d'abord les jetons noirs, puis les blancs, en excluant les couleurs déjà considérées dans les jetons noirs.",
+    "modesRules": "Modes de Jeu :\n\n1. **Partie Simple**:\n  - Application des règles du Mastermind à une seule partie.\n  - Objectif : deviner le Code Secret en le moins de tentatives possible.\n  - Option de personnalisation : Vous pouvez activer la présence de plusieurs instances de la même couleur dans la combinaison (désactivée par défaut).\n\n2. **Mode Compétitif**:\n  - Avancez au niveau suivant à chaque combinaison devinée.\n  - Gagnez des points en fonction du nombre de tentatives nécessaires pour deviner.\n  - La partie se termine à la première défaite.\n  - Tous les 10 niveaux, le nombre de tentatives autorisées diminue d'un.\n  - Fonction de personnalisation : La présence de plusieurs instances de la même couleur dans la combinaison est désactivée jusqu'au niveau 25.\n\n3. **Mode Personnalisé**:\n  - Permet aux joueurs de personnaliser :\n  - Le nombre de tentatives autorisées.\n  - Le nombre de couleurs dans une combinaison.\n  - Option de personnalisation : Vous pouvez activer la présence de plusieurs instances de la même couleur dans la combinaison (désactivée par défaut).",
+
+    "nameLabel": "Nom",
+    "surnameLabel": "Nom de Famille",
+    "emailLabel": "E-mail",
+    "usernameLabel": "Nom d'Utilisateur",
+    "pwLabel": "Mot de Passe",
+    "cpwLabel": "Confirmer le Mot de Passe",
+    "reg": "S'inscrire",
+
+    "levelText": "Niveau: ",
+    "pointsText": "Score: ",
+
+    "comment": {
+        "newMatch": "Nouvelle Partie Démarrée",
+        "winner": "Nous avons un Gagnant",
+        "loser": "Ne soyez pas découragé, la prochaine fois sera meilleure",
+        "wrongAttempt": "Réessaye, tu auras plus de chance",
+        "notEnoughCol": "Nombre de couleurs insuffisant",
+        "tooManyCol": "Cliquez sur 'Vérifier'",
+        "waitForStart": "Appuyez sur 'Démarrer le jeu'",
+        "void": ""
+    },
+
+    "position": "Position",
+    "player": "Joueur",
+    "third": {
+        "classic": "Victoires",
+        "scoreView": "Meilleur Score",
+        "streakView": "Série"
+    },
+
+    "msg": {
+        "invUsername": "Nom d'utilisateur invalide",
+        "invPassword": "Mot de passe invalide",
+        "regInvInput": "Données invalides",
+        "regInvUser": "Le nom d'utilisateur doit comporter entre 5 et 20 caractères et ne peut contenir que des lettres, des chiffres, des points ou des traits de soulignement",
+        "regInvPass": "Le mot de passe doit comporter entre 5 et 20 caractères et ne peut contenir que des lettres, des chiffres, des points ou des traits de soulignement",
+        "regInvEmail": "E-mail invalide",
+        "regInvCpw": "Les mots de passe ne correspondent pas"
+    },
+
+    "dateLabel": "Vous êtes un joueur depuis : ",
+    "glStats": "Statistiques Globales",
+    "fmStats": "Statistiques dans le mode préféré",
+    "totVic": "Victoires Totales",
+    "totMat": "Parties Totales",
+    "totPerc": "Pourcentage",
+
+    "favMod": "Mode Favori",
+    "fm_Perc": "Pourcentage",
+    "fm_totMat": {
+        "comp": "Nombre de Tentatives",
+        "notComp": "Parties Jouées"
+    },
+    "fm_totVic": {
+        "comp": "Meilleure Série",
+        "notComp": "Parties Gagnées"
+    },
+
+    "globalPos": "Classement Mondial: ",
+
+    "streak": "Série",
+    "streakPos": "Classement des Séries (Victoires Consécutives): ",
+
+    "score": "Score",
+    "scorePos": "Classement des Scores (Score Maximum): ",
+
+    "login": {
+        "wrongParam": "Nom d'utilisateur ou mot de passe incorrect",
+        "unexUser": "Le nom d'utilisateur n'existe pas",
+        "unexPass": "Mot de passe incorrect",
+        "success": "Connexion réussie"
+    },
+    
+    "emptyFavMod": "''",
+    
+    "registration": {
+        "invName": "Nom invalide",
+        "invSurname": "Nom de famille invalide",
+        "invCpass": "Confirmer le Mot de Passe",
+        "alExEmail": "Un compte existe déjà avec cette adresse e-mail",
+        "alExUser": "Nom d'utilisateur déjà utilisé",
+        "success": "Inscription réussie",
+        "error": "Il semble y avoir un problème avec l'inscription"
+    },
+    
+    "log": "Se Connecter",
+    "cancel": "Fermer",
+    "welcome": "Connectez-vous à votre compte",
+    "regNow": "S'inscrire"
+}

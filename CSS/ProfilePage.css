@@ -1,0 +1,180 @@
+#return{
+  background-image: url(../PNG/ICONE/ICONE-01.png);
+  background-size: cover;
+  background-position: center;
+  width: 42px;
+  height: 42px;
+}
+#return:hover{
+  cursor: pointer;
+  background-image: url(../PNG/ICONE/ICONE-03.png);
+}
+#return.clicked {
+  background-image: url(../PNG/ICONE/ICONE-03.png);
+}
+
+#user{
+  font-family: 'Comic Neue', cursive;
+  font-size: 25pt;
+  font-weight: 700;
+}
+
+#logout{
+  background-image: url(../PNG/ICONE/ICONE-11.png);
+  background-size: cover;
+  background-position: center;
+  width: 42px;
+  height: 42px;
+}
+#logout:hover{
+  cursor: pointer;
+  background-image: url(../PNG/ICONE/ICONE-12.png);
+}
+
+body{
+  background-image: url(../PNG/GRAFICHE/PROFILO.png);
+  background-position: top center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main{
+  margin-top: 1rem;
+  width: 50rem;
+  height: 31.7rem;
+  display: grid;
+  grid-template-columns: 9rem 35rem;
+  grid-template-rows: 0.15fr 1fr;
+}
+.since{
+  grid-column: span 2;
+  margin-left: 5rem;
+  justify-self: center;
+  height: 20px;
+}
+#dateLabel{
+  display: inline-block;
+  font-family: 'Comic Neue', cursive;
+  font-size: 15pt;
+  font-weight: 700;
+}
+
+#date{
+  font-family: 'Comic Neue', cursive;
+  font-weight: 700;
+  font-size: 13pt;
+}
+
+.pos{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+  width: 7rem;
+  word-wrap: break-word;
+
+  margin-left: 2rem;
+  align-items: center;
+
+  font-family: 'Comic Neue', cursive;
+  font-weight: 600;
+  font-size: 10pt;
+}
+.boardBox{
+  text-align: center;
+}
+
+#comp{
+  grid-row: span 2;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+#streak{
+  margin-top: 2.5rem;
+  justify-self: center;
+}
+#score{
+  margin-top: 3.5rem;
+  justify-self: center;
+}
+
+.position{
+  margin-top: 1rem;
+  font-size: 20pt;
+}
+
+.stats{
+  grid-column: 2/3;
+  grid-row: 2/3;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  margin-left: 8rem;
+}
+
+#VT, #FM{
+  text-align: center;
+}
+
+#VT{
+  margin-top: 2.7rem;
+  margin-left: 5rem;
+  height: 11.3rem;
+  width: 60%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 0.55fr 0.95fr 0.75fr 1.4fr;
+}
+#FM{
+  margin-top: 3.2rem;
+  margin-left: 2rem;
+  height: 11rem;
+  width: 85%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 0.6fr 0.95fr 0.75fr 0.8fr 0.5fr;
+}
+
+#glStats, #fmStats{
+  font-size: 12pt;
+  font-weight: 700;
+  grid-column: span 2;
+
+  font-family: 'Comic Neue', cursive;
+  font-size: 17pt;
+  font-weight: 700;
+  margin-bottom: 9px;
+}
+#glStats{
+  margin-top: -1px;
+}
+#fmStats{
+  margin-left: 2rem;
+}
+#statBox0, #statBox3{
+  margin-top: 0.6rem;
+}
+
+#statBox0, 
+#statBox1,
+#statBox2,
+#statBox3, 
+#statBox4,
+#statBox5,
+#statBox6{
+  grid-column: span 2;
+  margin-left: 1rem;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  font-family: 'Comic Neue', cursive;
+  font-size: 12pt;
+  font-weight: 500;
+}

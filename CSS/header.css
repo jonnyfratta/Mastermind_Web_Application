@@ -1,0 +1,64 @@
+header{
+    display: grid;
+    grid-template-columns: 2fr 8fr 1fr 1fr;
+    align-items: center;
+    justify-items: center ;
+    width: 100%;
+    height: 100px;
+    padding-bottom: 30px;
+    margin-bottom: 48px;
+}
+
+.titleBox{
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 50px;
+    margin-top: 30px;
+}
+
+#title{
+    font-family: 'Comic Neue', cursive;
+    font-size: 42pt;
+    font-weight: 700;
+}
+
+#subtitle{
+    font-family: 'Comic Neue', cursive;
+    font-size: 30pt;
+    font-weight: 400;
+}
+
+#langButton{
+    background-image: url(../PNG/ICONE/ICONE-09.png);
+    background-size: cover;
+    background-position: center;
+    width: 42px;
+    height: 42px;
+}
+#langButton:hover{
+    cursor: pointer;
+    background-image: url(../PNG/ICONE/ICONE-10.png);
+}
+#langButton.clicked {
+    background-image: url(../PNG/ICONE/ICONE-10.png);
+}
+
+#loginButton{
+    background-image: url(../PNG/ICONE/ICONE-06.png);
+    background-size: cover;
+    background-position: center;
+    width: 42px;
+    height: 42px;
+    grid-column: 4/5;
+}
+
+#loginButton:hover{
+    cursor: pointer;
+    background-image: url(../PNG/ICONE/ICONE-08.png);
+}
+#loginButton.clicked {
+    background-image: url(../PNG/ICONE/ICONE-08.png);
+}

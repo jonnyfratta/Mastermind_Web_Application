@@ -1,0 +1,109 @@
+header{
+    height: 100px;
+    padding-bottom: 28px;
+    margin-bottom: 0;
+}
+
+#return{
+    background-image: url(../PNG/ICONE/ICONE-13.png);
+    background-size: cover;
+    background-position: center;
+    width: 42px;
+    height: 42px;
+}
+#return:hover{
+    cursor: pointer;
+    background-image: url(../PNG/ICONE/ICONE-14.png);
+}
+
+
+body{
+    background-image: url(../PNG/GRAFICHE/REGOLAMENTO.png);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+main{
+    height: 76vh;
+}
+#regForm{
+    /* margin-top: 2px; */
+    width: 48%;
+    height: 100%;
+    margin-left: 26%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1.95fr 1.9fr 1.95fr 1.95fr 2.3fr 1fr;
+
+    align-items: start;
+}
+
+#nameLabel, 
+#surnameLabel, 
+#emailLabel, 
+#usernameLabel, 
+#pwLabel, 
+#cpwLabel{
+    font-family: 'Comic Neue', cursive;
+    font-size: 13pt;
+    font-weight: 500;
+}
+
+#name, 
+#surname, 
+#mail, 
+#username, 
+#pw, 
+#cpw{
+    border: 0;
+    border-bottom: 2px solid #2a2a27;
+    width: 80%;
+    height: 20%;
+    justify-self: center;
+    background: none;
+
+    font-family: 'Comic Neue', cursive;
+    font-size: 10pt;
+    font-style: italic;
+    font-weight: 400;
+}
+#cpw{
+    margin-top: -2px;
+}
+
+#name:focus, 
+#surname:focus, 
+#mail:focus, 
+#username:focus,
+#pw:focus, 
+#cpw:focus{
+    border-bottom: 2px solid #2a2a27;
+    outline: none;
+    background: none;
+}
+
+#reg{
+    background: none;
+    border: 0;
+    padding: 0;
+    padding-top: 1px;
+    cursor: pointer;
+    color: #64a6bd;
+
+    font-family: 'Comic Neue', cursive;
+    font-size: 18pt;
+    font-weight: 600;
+}
+
+#msg{
+    margin-top: -1.3%;
+    margin-left: 51%;
+    line-height: 108%;
+    width: 22%;
+    color: #e26d5c;
+
+    font-family: 'Comic Neue', cursive;
+    font-size: 13pt;
+    font-weight: 600;
+}

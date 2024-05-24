@@ -1,0 +1,80 @@
+header{
+    grid-template-columns: 2fr 8fr 1fr 1fr;
+}
+
+.titleBox{
+    grid-column: 2/3;
+}
+
+#loginButton{
+    grid-column: 4/5;
+}
+
+#settings{
+    display: grid;
+
+
+    padding: 9px 0;
+    grid-template-rows: repeat(16, 17px);
+    grid-template-columns: 5fr 1fr;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 250px;
+    position: relative;
+    top: 2rem;
+    left: 3rem;
+
+    background-image: url(../PNG/FOGLI/FOGLIO_CLASSIFICA.png);
+    background-position: center;
+    background-size: cover;
+    box-shadow: 5px 5px 1px #c9af85;
+}
+
+#rowLabel{
+    grid-row: 4/5;
+    margin-bottom:15px;
+
+    font-family: 'Comic Neue', cursive;
+    font-size: 16pt;
+    font-weight: 500;
+}
+#rows{
+    grid-row: 4/5;
+    margin: 0px 10px 18.5px;
+    border: 1px solid #2a2a27;
+    border-radius: 20px;
+}
+#columnLabel{
+    grid-row: 7/8;
+
+    font-family: 'Comic Neue', cursive;
+    font-size: 16pt;
+    font-weight: 500;
+}
+#columns{
+    grid-row: 7/8;
+    margin: 0px 10px 7px;
+    border: 1px solid #2a2a27;
+    border-radius: 20px;
+}
+#start{
+    grid-column: span 2;
+    grid-row: 11/12;
+    height: 37px;
+    width: 200px;
+    justify-self: center;
+
+    margin: 0px 10px 10.5px;
+    border: 1px solid #2a2a27;
+    border-radius: 10px;
+    background-color: #64a6bd;
+    cursor: pointer;
+}
+
+.tutorial{
+    width: 40%;
+    margin-top: 49.7%;
+    margin-left: 33.5%;
+}

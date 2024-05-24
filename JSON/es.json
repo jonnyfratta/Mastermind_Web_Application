@@ -1,0 +1,112 @@
+{
+    "single": "Juego Individual",
+    "compet": "Modo Competitivo",
+    "custom": "Modo Personalizado",
+    "rules": "Reglas",
+
+    "combLabel": "Habilitar la presencia múltiple del mismo color en la combinación",
+    "reset": "Reiniciar",
+    "start": "Iniciar Juego",
+    "check": "Evaluar",
+    "clear": "Limpiar",
+    "scoreView": "Por Puntuación",
+    "streakView": "Por Victorias Consecutivas",
+    "rowLabel": "Número de Intentos",
+    "columnLabel": "Número de Colores en la Combinación",
+    "case1": "1 color correcto en la posición correcta",
+    "case2": "1 color correcto en la posición incorrecta",
+
+    
+    "fullRules": "Mastermind es un juego de lógica donde tradicionalmente dos jugadores se turnan en los roles de Codificador y Decodificador. El Codificador elige y oculta el código secreto, mientras que el Decodificador intenta adivinarlo. En esta versión digital, la computadora es el Codificador, y tú asumes el papel de Decodificador.\n\nEl objetivo del juego es adivinar el Código Secreto en la menor cantidad de intentos posibles, generalmente compuesto por cuatro clavijas de colores. El Decodificador propone intentos con códigos de colores, y el Codificador proporciona clavijas clave blancas y negras para cada intento.\n\nLas reglas para las clavijas clave son las siguientes:\n  - Las clavijas negras indican los colores del código en la posición correcta.\n  - Las clavijas blancas indican colores presentes en el código pero en la posición incorrecta.\n  - Ninguna clavija clave para colores no presentes en el Código Secreto.\n\nEs importante tener en cuenta que las clavijas blancas y negras solo indican la cantidad de clavijas de colores presentes en el Código Secreto, no su posición. Para evitar errores con colores repetidos, el Codificador coloca primero las clavijas negras y luego las blancas, excluyendo los colores ya considerados en las clavijas negras.",
+    "modesRules": "Modos de Juego:\n\n1. **Partida Individual**:\n  - Aplicación de las reglas de Mastermind a una sola partida.\n  - Objetivo: adivinar el Código Secreto en la menor cantidad de intentos posibles.\n  - Opción de personalización: Puedes habilitar la presencia de múltiples instancias del mismo color en la combinación (deshabilitado por defecto).\n\n2. **Modo Competitivo**:\n  - Avanza al siguiente nivel con cada combinación adivinada.\n  - Gana puntos según la cantidad de intentos necesarios para adivinar.\n  - La partida termina con la primera derrota.\n  - Cada 10 niveles, la cantidad permitida de intentos disminuye en uno.\n  - Función de personalización: La presencia de múltiples instancias del mismo color en la combinación está deshabilitada hasta el nivel 25.\n\n3. **Modo Personalizado**:\n  - Permite a los jugadores personalizar:\n  - La cantidad de intentos permitidos.\n  - La cantidad de colores en una combinación.\n  - Opción de personalización: Puedes habilitar la presencia de múltiples instancias del mismo color en la combinación (deshabilitado por defecto).",
+
+    "nameLabel": "Nombre",
+    "surnameLabel": "Apellido",
+    "emailLabel": "Correo Electrónico",
+    "usernameLabel": "Nombre Usuario",
+    "pwLabel": "Contraseña",
+    "cpwLabel": "Confirmar Contraseña",
+    "reg": "Registrarse",
+
+    "levelText": "Nivel: ",
+    "pointsText": "Puntos: ",
+
+    "comment": {
+        "newMatch": "Nueva Partida Iniciada",
+        "winner": "Tenemos un Ganador",
+        "loser": "Próxima vez será mejor, presiona 'Reiniciar'",
+        "wrongAttempt": "Inténtalo de nuevo, tendrás más suerte",
+        "notEnoughCol": "No seleccionaste suficientes colores",
+        "tooManyCol": "Presiona 'Evaluar'",
+        "waitForStart": "Presiona 'Iniciar Juego'",
+        "void": ""
+    },
+    
+    "position": "Posición",
+    "player": "Jugador",
+    "third": {
+        "classic": "Victorias",
+        "scoreView": "Puntuación",
+        "streakView": "Consecutivas"
+    },
+
+    "msg": {
+        "invUsername": "Nombre de Usuario no válido",
+        "invPassword": "Contraseña no válida",
+        "regInvInput": "Datos no válidos",
+        "regInvUser": "El nombre de usuario debe tener entre 5 y 20 caracteres y solo puede contener letras, números, puntos o guiones bajos",
+        "regInvPass": "La contraseña debe tener entre 5 y 20 caracteres y solo puede contener letras, números, puntos o guiones bajos",
+        "regInvEmail": "Correo electrónico no válido",
+        "regInvCpw": "Las dos contraseñas no coinciden"
+    },
+    
+    "dateLabel": "Eres un jugador desde: ",
+    "glStats": "Estadísticas Generales",
+    "fmStats": "Estadísticas en tu modo preferido",
+    "totVic": "Victorias Totales",
+    "totMat": "Partidas Totales",
+    "totPerc": "Porcentaje",
+
+    "favMod": "Modo Favorito",
+    "fm_Perc": "Porcentaje",
+    "fm_totMat": {
+        "comp": "Número de Intentos",
+        "notComp": "Partidas Jugadas"
+    },
+    "fm_totVic": {
+        "comp": "Mejor racha",
+        "notComp": "Partidas Ganadas"
+    },
+
+    "globalPos": "Clasificación Global: ",
+
+    "streak": "Racha",
+    "streakPos": "Clasificación (Victorias Consecutivas): ",
+
+    "score": "Puntuación",
+    "scorePos": "Clasificación (Puntuación Máxima): ",
+
+    "login": {
+        "wrongParam": "Nombre de Usuario o Contraseña Incorrectos",
+        "unexUser": "Nombre de Usuario inexistente",
+        "unexPass": "Contraseña incorrecta",
+        "success": "Inicio de sesión exitoso"
+    },
+
+    "emptyFavMod": "''",
+
+    "registration": {
+        "invName": "Nombre no válido",
+        "invSurname": "Apellido no válido",
+        "invCpass": "Confirmar Contraseña",
+        "alExEmail": "Ya existe una cuenta asociada a este correo electrónico",
+        "alExUser": "Nombre de Usuario ya en uso",
+        "success": "Registro exitoso",
+        "error": "Parece que hubo un problema con el registro"
+    },
+
+    "log": "Iniciar Sesión",
+    "cancel": "Cerrar",
+    "welcome": "Inicia sesión en tu cuenta",
+    "regNow": "Regístrate"
+}

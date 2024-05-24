@@ -1,0 +1,113 @@
+{
+    "single": "Einzelmatch",
+    "compet": "Wettbewerbsmodus",
+    "custom": "Benutzerdefinierter Modus",
+    "rules": "Regeln",
+
+    "combLabel": "Aktiviere mehrere Instanzen derselben Farbe in der Kombination",
+    "reset": "Neustart",
+    "start": "Spiel starten",
+    "check": "Überprüfen",
+    "clear": "Löschen",
+    "scoreView": "Nach Punkten",
+    "streakView": "Nach Serie",
+    "rowLabel": "Anzahl der Versuche",
+    "columnLabel": "Anzahl der Farben in der Kombination",
+    "case1": "1 richtige Farbe an der richtigen Position",
+    "case2": "1 richtige Farbe an der falschen Position",
+
+    
+    "fullRules": "Mastermind ist ein Logikspiel, bei dem traditionell zwei Spieler die Rollen des Codierers und Decodierers abwechseln. Der Codierer wählt und versteckt den geheimen Code, während der Decodierer versucht, ihn zu erraten. In dieser digitalen Version ist der Computer der Codierer, und du übernimmst die Rolle des Decodierers.\n\nDas Ziel des Spiels ist es, den Geheimcode in möglichst wenigen Versuchen zu erraten, der normalerweise aus vier farbigen Stiften besteht. Der Decodierer schlägt Versuche mit farbigen Codes vor, und der Codierer liefert weiße und schwarze Schlüsselstifte für jeden Versuch.\n\nDie Regeln für die Schlüsselstifte sind wie folgt:\n  - Schwarze Stifte zeigen die Farben des Versuchs-Codes an, die sich an der richtigen Stelle im Geheimcode befinden.\n  - Weiße Stifte zeigen Farben im Geheimcode an, die sich jedoch an der falschen Stelle befinden.\n  - Keine Schlüsselstifte für Farben im gespielten Code, die nicht im Geheimcode vorhanden sind.\n\nEs ist wichtig zu beachten, dass weiße und schwarze Stifte nur die Menge der farbigen Stifte im Geheimcode anzeigen, nicht ihre Position. Um Fehler bei wiederholten Farben zu vermeiden, setzt der Codierer zuerst schwarze Stifte und dann weiße Stifte ein und schließt dabei Farben aus, die bereits in den schwarzen Stiften berücksichtigt wurden.",
+    "modesRules": "Spielmodi:\n\n1. **Einzelmatch**:\n  - Anwendung der Mastermind-Regeln auf ein einzelnes Spiel.\n  - Ziel: Den Geheimcode in möglichst wenigen Versuchen erraten.\n  - Anpassungsoption: Sie können die Mehrfachpräsenz derselben Farbe in der Kombination aktivieren (standardmäßig deaktiviert).\n\n2. **Wettbewerbsmodus**:\n  - Steige mit jeder erratenen Kombination auf ein höheres Level auf.\n  - Verdiene Punkte basierend auf der Anzahl der benötigten Versuche zum Erraten.\n  - Das Spiel endet bei der ersten Niederlage.\n  - Alle 10 Level wird die erlaubte Anzahl der Versuche um eins verringert.\n  - Anpassungsfunktion: Die Mehrfachpräsenz derselben Farbe in der Kombination ist bis Level 25 deaktiviert.\n\n3. **Benutzerdefinierter Modus**:\n  - Ermöglicht es den Spielern, anzupassen:\n  - Die Anzahl der erlaubten Versuche.\n  - Die Anzahl der Farben in einer Kombination.\n  - Anpassungsoption: Sie können die Mehrfachpräsenz derselben Farbe in der Kombination aktivieren (standardmäßig deaktiviert).",
+
+
+    "nameLabel": "Name",
+    "surnameLabel": "Nachname",
+    "emailLabel": "E-Mail",
+    "usernameLabel": "Benutzername",
+    "pwLabel": "Passwort",
+    "cpwLabel": "Passwort bestätigen",
+    "reg": "Registrieren",
+
+    "levelText": "Level: ",
+    "pointsText": "Punktzahl: ",
+
+    "comment": {
+        "newMatch": "Neues Spiel gestartet",
+        "winner": "Wir haben einen Gewinner",
+        "loser": "Lass dich nicht entmutigen, beim nächsten Mal klappt es besser",
+        "wrongAttempt": "Versuche es erneut",
+        "notEnoughCol": "Zu wenige Farben vorhanden",
+        "tooManyCol": "Klicke auf 'Überprüfen'",
+        "waitForStart": "Drücke 'Spiel starten'",
+        "void": ""
+    },
+
+    "position": "Position",
+    "player": "Spieler",
+    "third": {
+        "classic": "Gewinne",
+        "scoreView": "Punkte",
+        "streakView": "Siegesreihe"
+    },
+
+    "msg": {
+        "invUsername": "Ungültiger Benutzername",
+        "invPassword": "Ungültiges Passwort",
+        "regInvInput": "Ungültige Daten",
+        "regInvUser": "Benutzername muss zwischen 5 und 20 Zeichen lang sein und darf nur Buchstaben, Zahlen, Punkte oder Unterstriche enthalten",
+        "regInvPass": "Passwort muss zwischen 5 und 20 Zeichen lang sein und darf nur Buchstaben, Zahlen, Punkte oder Unterstriche enthalten",
+        "regInvEmail": "Ungültige E-Mail",
+        "regInvCpw": "Passwörter stimmen nicht überein"
+    },
+
+    "dateLabel": "Du bist seit dabei: ",
+    "glStats": "Gesamtstatistiken",
+    "fmStats": "Statistiken im bevorzugten Modus.",
+    "totVic": "Gesamtsiege",
+    "totMat": "Gesamtspiele",
+    "totPerc": "Gewinnquote",
+
+    "favMod": "Lieblingsmodus",
+    "fm_Perc": "Gewinnquote",
+    "fm_totMat": {
+        "comp": "Anzahl der Versuche",
+        "notComp": "Gespielte Spiele"
+    },
+    "fm_totVic": {
+        "comp": "Beste Serie",
+        "notComp": "Gewonnene Spiele"
+    },
+
+    "globalPos": "globalen Rangliste: ",
+
+    "streak": "Serie",
+    "streakPos": "Rangliste (Siegessträhne): ",
+
+    "score": "Punktzahl",
+    "scorePos": "Rangliste (Höchstpunktzahl): ",
+
+    "login": {
+        "wrongParam": "Falscher Benutzername oder falsches Passwort",
+        "unexUser": "Benutzername existiert nicht",
+        "unexPass": "Falsches Passwort",
+        "success": "Anmeldung erfolgreich"
+    },
+    
+    "emptyFavMod": "''",
+    
+    "registration": {
+        "invName": "Ungültiger Name",
+        "invSurname": "Ungültiger Nachname",
+        "invCpass": "Passwort bestätigen",
+        "alExEmail": "Es existiert bereits ein Konto mit dieser E-Mail",
+        "alExUser": "Benutzername bereits in Verwendung",
+        "success": "Registrierung erfolgreich",
+        "error": "Es scheint ein Problem bei der Registrierung aufgetreten zu sein"
+    },
+    
+    "log": "Anmelden",
+    "cancel": "Schließen",
+    "welcome": "Melde dich bei deinem Konto an",
+    "regNow": "Registrieren"
+}

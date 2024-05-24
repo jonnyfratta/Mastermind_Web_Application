@@ -1,0 +1,71 @@
+#langMod{
+    visibility: hidden;
+    opacity: 0; 
+    position: fixed; 
+    top: 5.5rem;
+    right: 6.7rem;
+
+    width: 10rem; 
+    height: 267px;
+    background-image: url(../PNG/FOGLI/FOGLIO_LINGUE2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    border: 3px solid #2a2a27;
+    box-shadow: 8px 8px 3px #c9af85;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 99px 98px 69px;
+    grid-template-areas: 
+    "it en"
+    "es fr"
+    "de de";
+}
+
+.flag {
+    width: 45px;
+    height: 45px;
+    margin-top: 4px;
+    margin-bottom: 11%;
+}
+
+.language {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.language:hover {
+    cursor: pointer;
+}
+
+#it{
+    grid-area: it;
+}
+#en{
+    grid-area: en;
+}
+#es{
+    grid-area: es;
+}
+#fr{
+    grid-area: fr;
+}
+#de{
+    grid-area: de;
+}
+
+#de img{
+    margin-top: 0;
+    margin-bottom: 3%;
+}
+
+#it p, 
+#en p, 
+#es p, 
+#fr p, 
+#de p {
+    font-family: 'Comic Neue', cursive;
+    font-size: 13.5pt;
+    font-weight: 700;
+}

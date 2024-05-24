@@ -1,0 +1,36 @@
+body{
+    background-image: url(../PNG/GRAFICHE/BJ_HOME-01.png);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 72%;
+}
+
+.mode{
+    background-color: #96c5b0;
+    border-color: #2a2a27;
+    border-radius: 25px;
+    box-sizing: border-box;
+    width: 16.8%;
+    /* height: 102px; */
+    height: 30%;
+    min-width: 140px;
+    margin-bottom: 2.2%;
+
+    font-family: 'Comic Neue', cursive;
+    font-size: 16pt;
+    font-weight: 400;
+}
+
+.mode:hover {
+    background-color: #86b4a0;
+    cursor: pointer;
+    color: aliceblue;
+}
