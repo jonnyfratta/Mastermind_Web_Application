@@ -28,10 +28,9 @@ Mastermind is a logic game where you have to guess a randomly generated color se
     2. Among the options in the upper part of the page, select 'Import'
     3. In the "file to import" section, select the file addressed by the following path: 
        ```sh
-        Mastermind_Web_Application/SQL/DataBase.sql
+        Mastermind_Web_Application/SQL/Database.sql
         ```
     and then press 'Import" at the bottom of the page.
-
 
 6. Now search the following path in your browser:
     ```sh

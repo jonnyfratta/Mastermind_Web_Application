@@ -4,14 +4,14 @@ document.addEventListener("DOMContentLoaded", function(){
   fetchDataAndCreateTable();
 });
 
-let scoreView = true;   //variabile che decide quale tipo di classifica mostrare
+let scoreView = true;   //controls which leaderboard type is shown
 
 if(selectedMode === "competitive"){
   const elem1 = document.getElementById("scoreView");
   const elem2 = document.getElementById("streakView");
 
   elem1.addEventListener("click", function(){
-    //mostro la classifica per punteggio
+    //show leaderboard by score
       scoreView = true;
       if(elem2.classList.contains("clicked"))
           elem2.classList.remove("clicked");
@@ -21,7 +21,7 @@ if(selectedMode === "competitive"){
       fetchDataAndCreateTable();
     });
   elem2.addEventListener("click", function(){
-    //mostro la classifica per vittorie consecutive
+    //show leaderboard by win streak
       scoreView = false;
       if(elem1.classList.contains("clicked"))
           elem1.classList.remove("clicked");
@@ -32,9 +32,9 @@ if(selectedMode === "competitive"){
   });
 }
 
-//--------------------------------------------------------------------------FUNZIONI DI UTILITA'-----------------------------------------------------------------------------
+//--------------------------------------------------------------------------UTILITY FUNCTIONS'-----------------------------------------------------------------------------
 
-//recupero le informazioni dal server e le uso per creare la classifica
+//fetch server data and build leaderboard
 function fetchDataAndCreateTable() {
   fetch("PHP/Back/lbBack.php?scoreView=" + scoreView)
     .then(response => response.json())
@@ -62,11 +62,11 @@ function translateLeaderboard(){
   translate(['third'], subclass);
 }
 
-//------------------------------------------------------------------------------GESTIONE LEADERBOARD----------------------------------------------------------------------------
+//------------------------------------------------------------------------------LEADERBOARD HANDLING----------------------------------------------------------------------------
 function createLboard(data) {
   const table = document.createElement("table");
 
-  //alloco l'header della tabella
+  //create leaderboard table header
   const header = document.createElement("thead");
 
   table.appendChild(header);
@@ -91,7 +91,7 @@ function createLboard(data) {
 
   translateLeaderboard();
 
-  //alloco il corpo della tabella
+  //create leaderboard table body
   const user = document.getElementById("user");
 
   const bodyBox = document.createElement("tbody");

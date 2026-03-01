@@ -1,4 +1,4 @@
-//ricavo il valore del cookie
+//read cookie value
 function getCookie(name) {
     //recupero l'array dei cookie presenti
     const cookies = document.cookie.split(';');

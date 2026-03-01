@@ -1,111 +1,114 @@
 {
-    "single": "Partita Singola",
-    "compet": "Modalità a Livelli",
-    "custom": "Personalizzata",
-    "rules": "Regolamento",
+    "single": "Single Match",
+    "compet": "Competitive Mode",
+    "custom": "Custom Mode",
+    "rules": "Rules",
 
-    "combLabel": "Abilita presenza multipla dello stesso colore nella combinazione",
-    "reset": "Riavvia",
-    "start": "Avvia Partita",
-    "check": "Valuta",
-    "clear": "Cancella",
-    "scoreView": "Per Punteggio",
-    "streakView": "Per Vittorie Consecutive",
-    "rowLabel": "Numero Tentativi",
-    "columnLabel": "Numero Colori Combinazione",
-    "case1": "1 cololore giusto nella posizione giusta",
-    "case2": "1 colore giusto nella posizione sbagliata",
+    "combLabel": "Enable multiple instances of the same color in the combination",
+    "reset": "Restart",
+    "start": "Start Game",
+    "check": "Check",
+    "clear": "Clear",
+    "scoreView": "By Score",
+    "streakView": "By Streak",
+    "rowLabel": "Number of Attempts",
+    "columnLabel": "Number of Colors in Combination",
+    "case1": "1 correct color in the right position",
+    "case2": "1 correct color in the wrong position",
+    "case3": "Empty peg: no match",
+    "case4": "Hint pegs order does not indicate position",
 
-    "fullRules": "Il Mastermind è un gioco di logica in cui tradizionalmente due giocatori si alternano nei ruoli di Codificatore e Decodificatore. Il Codificatore sceglie e nasconde il codice segreto, mentre il Decodificatore cerca di indovinarlo. In questa versione digitale, il computer è il Codificatore, e tu assumi il ruolo di Decodificatore.\n\nL'obiettivo del gioco è indovinare il Codice Segreto nel minor numero di tentativi possibili, composto di solito da quattro pioli colorati. Il Decodificatore (tu) propone tentativi con codici colorati, e il Codificatore fornisce, in risposta, Pioli Chiave bianchi e neri per ogni tentativo.\n\nLe regole per i Pioli Chiave sono le seguenti:\n  - Pioli neri indicano il numero di colori del tentativo, presenti nel Codice Segreto nella posizione corretta.\n  - Pioli bianchi indicano il numero di colori presenti nel Codice Segreto ma nella posizione errata.\n  - Nessun Piolo Chiave per i colori del codice giocato non presenti nel Codice Segreto.\n\nÈ importante notare che i Pioli Bianchi e Neri indicano solo la quantità di pioli colorati presenti nel Codice Segreto, non la loro posizione. Per evitare errori con colori ripetuti, il Codificatore pone prima i pioli neri e poi quelli bianchi, escludendo i colori già considerati nei pioli neri.",
-    "modesRules": "Modalità di Gioco:\n\n1. **Partita Singola**:\n  - Applicazione delle regole del Mastermind a una singola partita.\n  - Scopo: indovinare il Codice Segreto nel minor numero di tentativi possibili.\n  - Opzione di personalizzazione: Puoi abilitare la presenza multipla dello stesso colore nella combinazione (disabilitato di default).\n\n2. **Modalità Competitiva**:\n  - Ad ogni combinazione indovinata, avanza di un livello.\n  - Guadagna punti in base al numero di tentativi necessari per indovinare.\n  - La partita termina alla prima sconfitta.\n  - Ogni 10 livelli, il numero di tentativi ammessi decrementa di uno.\n  - Feature di personalizzazione: La presenza multipla dello stesso colore nella combinazione è disabilitata fino al livello 25.\n\n3. **Modalità Personalizzata**:\n  - Permette ai giocatori di personalizzare:\n  - Il numero di tentativi consentiti.\n  - Il numero di colori in una combinazione.\n  - Opzione di personalizzazione: Puoi abilitare la presenza multipla dello stesso colore nella combinazione (disabilitato di default).",
     
-    "nameLabel": "Nome",
-    "surnameLabel": "Cognome",
+    "fullRules": "Mastermind is a logic game where traditionally two players take turns in the roles of Codemaker and Codebreaker. The Codemaker chooses and hides the secret code, while the Codebreaker tries to guess it. In this digital version, the computer is the Codemaker, and you take on the role of the Codebreaker.\n\nThe goal of the game is to guess the Secret Code in as few attempts as possible, usually composed of four colored pegs. The Codebreaker proposes attempts with colored codes, and the Codemaker provides white and black Key Pegs for each attempt.\n\nThe rules for Key Pegs are as follows:\n  - Black Pegs indicate the colors of the Code in the correct position.\n  - White Pegs indicate colors present in the Code but in the wrong position.\n  - No Key Pegs for colors not present in the Secret Code.\n\nIt's important to note that White and Black Pegs only indicate the quantity of colored pegs present in the Secret Code, not their position. To avoid errors with repeated colors, the Codemaker places black pegs first and then white pegs, excluding colors already considered in the black pegs.",
+    "modesRules": "Game Modes:\n\n1. **Single Match**:\n  - Application of Mastermind rules to a single game.\n  - Goal: guess the Secret Code in as few attempts as possible.\n  - Customization option: You can enable the presence of multiple instances of the same color in the combination (disabled by default).\n\n2. **Competitive Mode**:\n  - Advance to the next level with each guessed combination.\n  - Earn points based on the number of attempts needed to guess.\n  - The game ends with the first defeat.\n  - Every 10 levels, the allowed number of attempts decreases by one.\n  - Customization feature: The presence of multiple instances of the same color in the combination is disabled until level 25.\n\n3. **Custom Mode**:\n  - Allows players to customize:\n  - The number of allowed attempts.\n  - The number of colors in a combination.\n  - Customization option: You can enable the presence of multiple instances of the same color in the combination (disabled by default).",
+      
+    "nameLabel": "Name",
+    "surnameLabel": "Surname",
     "emailLabel": "Email",
-    "usernameLabel": "Nome Utente",
+    "usernameLabel": "Username",
     "pwLabel": "Password",
-    "cpwLabel": "Conferma Password",
-    "reg": "Registrati",
+    "cpwLabel": "Confirm Password",
+    "reg": "Sign Up",
 
-    "levelText": "Livello: ",
-    "pointsText": "Punteggio: ",
+    "levelText": "Level: ",
+    "pointsText": "Score: ",
 
     "comment": {
-        "newMatch": "Nuova Partita Avviata",
-        "winner": "Abbiamo un Vincitore",
-        "loser": "Non arrenderti, clicca 'Riavvia'",
-        "wrongAttempt": "Ritenta, sarai più fortunato",
-        "notEnoughCol": "Numero colori insufficiente",
-        "tooManyCol": "Clicca su 'Valuta'",
-        "waitForStart": "Premere 'Avvia Partita'",
+        "newMatch": "New Game Started",
+        "winner": "We Have a Winner",
+        "loser": "Better luck next time, click 'Restart'",
+        "wrongAttempt": "Try again, you'll be luckier",
+        "notEnoughCol": "Unzureichende Anzahl von Farben",
+        "tooManyCol": "Click 'Check'",
+        "waitForStart": "Press 'Start Game'",
         "void": ""
-        },
-    
-    "position": "Posizione",
-    "player": "Giocatore",
-    "third":{
-        "classic": "Vittorie",
-        "scoreView": "Punteggio",
-        "streakView": "Striscia"
+    },
+
+    "position": "Position",
+    "player": "Player",
+    "third": {
+        "classic": "Wins",
+        "scoreView": "Best Score",
+        "streakView": "Wins Streak"
     },
 
     "msg": {
-        "invUsername": "Nome Utente non valido",
-        "invPassword": "Password non valida",
-        "regInvInput": "Dati non validi",
-        "regInvUser":   "Il nome utente deve avere tra i 5 e i 20 caratteri e può contenere solo lettere, numeri, punti o underscore",
-        "regInvPass":   "La password deve avere tra i 5 e i 20 caratteri e può contenere solo lettere, numeri, punti o underscore",
-        "regInvEmail":  "Email non valida",
-        "regInvCpw":    "Le due password non corrispondono"
+        "invUsername": "Invalid Username",
+        "invPassword": "Invalid Password",
+        "regInvInput": "Invalid Data",
+        "regInvUser": "Username must be between 5 and 20 characters and can only contain letters, numbers, dots, or underscores",
+        "regInvPass": "Password must be between 5 and 20 characters and can only contain letters, numbers, dots, or underscores",
+        "regInvEmail": "Invalid Email",
+        "regInvCpw": "Passwords do not match"
     },
-    
-    "dateLabel": "Sei un giocatore dal: ",
-    "glStats": "Statistiche Complessive",
-    "fmStats": "Statistiche nella modalità preferita",
-    "totVic": "Vittorie Totali",
-    "totMat": "Partite Totali",
-    "totPerc": "Percentuale Vittorie",
 
-    "favMod": "Modalità Preferita",
-    "fm_Perc": "Percentuale Vittoria",
+    "dateLabel": "You have been a player since: ",
+    "glStats": "Overall Statistics",
+    "fmStats": "Statistics in your preferred mode",
+    "totVic": "Total Wins",
+    "totMat": "Total Matches",
+    "totPerc": "Winning Percentage",
+
+    "favMod": "Favorite Mode",
+    "fm_Perc": "Winning Percentage",
     "fm_totMat": {
-        "comp": "Numero Tentativi",
-        "notComp": "Partite giocate"
+        "comp": "Number of Attempts",
+        "notComp": "Games Played"
     },
     "fm_totVic": {
-        "comp": "Miglior serie",
-        "notComp": "Partite Vinte"
+        "comp": "Best Streak",
+        "notComp": "Games Won"
     },
 
-    "globalPos": "Classifica Globale: ",
+    "globalPos": "Global Leaderboard: ",
 
-    "streak": "Serie",
-    "streakPos": "Classifica a Livelli \n(Vittorie consecutive): ",
+    "streak": "Streak",
+    "streakPos": "Streak Leaderboard (Consecutive Wins): ",
 
-    "score": "Punteggio",
-    "scorePos": "Classifica a Livelli \n(per Punteggio): ",
+    "score": "Score",
+    "scorePos": "Score Leaderboard (Highest Score): ",
 
     "login": {
-        "wrongParam": "Nome Utente o Password Errati",
-        "unexUser": "Nome Utente inesistente",
-        "unexPass": "Password non corretta",
-        "success": "Login effettuato con Successo"
+        "wrongParam": "Incorrect Username or Password",
+        "unexUser": "Username does not exist",
+        "unexPass": "Incorrect Password",
+        "success": "Login Successful"
     },
-
+    
     "emptyFavMod": "''",
-
+    
     "registration": {
-        "invName": "Nome non valido",
-        "invSurname": "Cognome non valido",
-        "invCpass": "Confermare la password",
-        "alExEmail":"Esiste già un account con collegato a questa email",
-        "alExUser":"Nome Utente già utilizzato",
-        "success": "Registrazione effettuata con successo",
-        "error": "Sembra ci sia stato un problema con la registrazione"
+        "invName": "Invalid Name",
+        "invSurname": "Invalid Surname",
+        "invCpass": "Confirm Password",
+        "alExEmail": "An account already exists with this email",
+        "alExUser": "Username already in use",
+        "success": "Registration successful",
+        "error": "There seems to be an issue with the registration"
     },
-
-    "log": "Accedi",
-    "cancel": "Chiudi",
-    "welcome": "Accedi al tuo Account",
-    "regNow": "Registrati"
+    
+    "log": "Log In",
+    "cancel": "Close",
+    "welcome": "Log in to your Account",
+    "regNow": "Sign Up"
 }

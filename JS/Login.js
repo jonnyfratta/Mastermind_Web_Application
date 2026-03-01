@@ -1,4 +1,4 @@
-//---------------------------------------------------------------------------ALLOCAZIONE RISORSE-------------------------------------------------------------------------
+//---------------------------------------------------------------------------RESOURCE ALLOCATION-------------------------------------------------------------------------
 const err = document.getElementById("msg");
 
 //----------------------------------------------------------------------------EVENT LISTENERS----------------------------------------------------------------------------
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   window.addEventListener('click', function (event) {
-    //controllo se si verifica un click al di fuori del modal mentre è aperto e in caso lo chiudo
+    //if a click occurs outside the modal while open, close it
     if (!mod.contains(event.target) && event.target !== loginButton) {
       mod.style.visibility = 'hidden';
       loginButton.classList.remove('clicked');
@@ -30,14 +30,14 @@ document.getElementById('close').addEventListener("click", function() {
   err.innerText = '';
 });
 
-//-----------------------------------------------------------------------------GESTIONE LOGIN-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------LOGIN HANDLING-----------------------------------------------------------------------------
 
 //invio al server i dati necessari ad effettuare il login
 const form = document.getElementById("loginForm");
     form.addEventListener("submit", function(element) {
       err.style.display = "none";
       err.innerHTML = "";
-      element.preventDefault(); //evito comportamento default: refresh pagina
+      element.preventDefault(); //prevent default behavior: page refresh
     
 
       const rExp = /^[\w.]{5,20}$/; // /^[a-zA-Z0-9_.]{5,20}$/;
@@ -63,13 +63,13 @@ const form = document.getElementById("loginForm");
           .then(response => response.json())
           .then(data => {
               if(!data['outcome']){
-                //se non ci si è loggati con successo allora counica all'utente il problema
+                //if login fails, show the related error to the user
                   err.style.display = "block";
                   err.innerHTML = data['message'];
                   return;
               }
               else{
-                //pagina precedente
+                //previous page
                 switch(data['back']){
                   case 1:
                     window.location.replace("SingleMatch.php?mode=classic");
@@ -96,4 +96,3 @@ const form = document.getElementById("loginForm");
           })
       }
 })
-

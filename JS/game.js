@@ -31,9 +31,9 @@ document.querySelectorAll(".color_button").forEach(function (element) {
     });
 });
 
-//--------------------------------------------------------------------------FUNZIONI DI UTILITA'-----------------------------------------------------------------------------
+//--------------------------------------------------------------------------UTILITY FUNCTIONS'-----------------------------------------------------------------------------
 
-// Cambia colore del singolo pin in base al numero indice del colore selezionato
+//change a single pin color based on selected color index
 function changePinColor(pinNum, colorInd, id) {
     if(!gameStarted) return;
 
@@ -67,7 +67,7 @@ function changePinColor(pinNum, colorInd, id) {
     }
 }
 
-//identifica in base all'id del colore cliccato, il suo indice nell'array dei colori
+//get color index from clicked color id
 function indexOfClickedColor(clickedId) {
     let color_id;
     switch (clickedId) {
@@ -92,7 +92,7 @@ function indexOfClickedColor(clickedId) {
     }
     return color_id;
 }
-//inserisce nell'array currentAttempt l'indice del colore cliccato
+//push clicked color index into currentAttempt
 function colorClicked(id) {
     if(!gameStarted) return;
 
@@ -118,7 +118,7 @@ function colorClicked(id) {
     }
 }
 
-//svuota il tentativo corrente
+//clear current guess
 function clearAnswer() {
     for (let i = 1; i <= columns; i++) {
         const pin = document.querySelector(`#current div:nth-child(${i})`);
@@ -159,7 +159,7 @@ function findEmptyPin() {
     return emptyPin;
 }
 
-//colora i pin di risultato
+//color result pins
 function changeResultPins() {
     results.forEach((element, i) => {
         const pin = document.querySelector(`#hint${round} div:nth-child(${i + 1})`);
@@ -168,19 +168,19 @@ function changeResultPins() {
     });
 }
 
-//colora i pallini dei tentativi
+//color attempt pins
 function changeRoundPins() {
     const id = "bet" + round;
     const pinBg = document.querySelector("#b" + round);
     if (pinBg.style.backgroundColor === "" || pinBg.style.backgroundColor === "rgb(106, 74, 57)") {
-        //se il primo pin di una riga è vuoto, la riga è vuota e quindi la riempio con la risposta corrente
+        //if the first pin is empty, the row is empty: fill it with current guess
         currentAttempt.forEach((element, i) => {
             changePinColor(i + 1, element, id);
         });
     }
 }
 
-//mostra livello e punteggio
+//show level and score
 function show(){
     if(selectedMode === "competitive"){
         const liv = document.getElementById("level");
@@ -193,8 +193,8 @@ function show(){
     }
 }
 
-//------------------------------------------------------------------------------FUNZIONI DI GIOCO-------------------------------------------------------------------------
-//avvio il gioco
+//------------------------------------------------------------------------------GAME FUNCTIONS-------------------------------------------------------------------------
+//start the game
 function start(){
     setHiddenComb(allowDuplicates);
     if(round == 1){
@@ -207,19 +207,19 @@ function start(){
     gameStarted = true;
 }
 
-// Creo combinazione casuale da indovinare
+//create a random hidden combination
 function setHiddenComb(allowDuplicates) {
-    hiddenComb = []; // Svuota eventuale combinazione precedente
+    hiddenComb = []; //clear any previous combination
     let availableColors = [0, 1, 2, 3, 4, 5];
 
     for (let i = 0; i < columns; i++) {
         let colorIndex;
 
         if (allowDuplicates) {
-            // Se sono ammessi duplicati oppure sono finiti i colori inediti allora scelta random tra tutti i colori
+            //if duplicates are allowed (or unique colors are exhausted), pick from all colors
             colorIndex = Math.floor(Math.random() * 6);
         } else {
-            // Se i duplicati non sono ammessi allora rimuove quel colore dall'elenco dei disponibili
+            //if duplicates are not allowed, remove chosen color from available list
             const randomIndex = Math.floor(Math.random() * availableColors.length);
             colorIndex = availableColors[randomIndex];
             availableColors.splice(randomIndex, 1);
@@ -228,7 +228,7 @@ function setHiddenComb(allowDuplicates) {
     }
 }
 
-//confronto risposta attuale con combinazione segreta
+//compare current guess with hidden combination
 function checkWin() {
     let equals = 0;
 
@@ -251,7 +251,7 @@ function checkWin() {
     return win;
 }
 
-//carico la partita nel database al termine della stessa
+//store match in database when it ends
 function gameEnded(victory){
     gameStarted = false;
     
@@ -272,7 +272,7 @@ function gameEnded(victory){
     })
     .then(response => response.json())
     .then(data => {
-        //aggiorno classifica
+        //refresh leaderboard
         if(selectedMode !== "custom"){
             console.log('Outcome:', data['status']);
             destroyTable();
@@ -282,11 +282,11 @@ function gameEnded(victory){
 }
 
 function getGuessResults() {
-    //crea copia array da confrontare
+    //create arrays copies for comparison
     let ans = Array.from(hiddenComb);
     let gs = Array.from(currentAttempt);
 
-    //cerca pin neri e salva sia l'indice del confronto che li ha generati in indexOfCorrect, sia la loro presenza nell'array results
+    //find black pins and store both indexes and results entries
     gs.forEach((element, i) => {
         if (element == ans[i]) {
             indexOfCorrect.push(i);
@@ -294,7 +294,7 @@ function getGuessResults() {
         }
     });
 
-    //rimuove gli elementi avente indice in removeItems per evitare che vengano valutati nel ciclo dei bianchi
+    //remove matched indexes so they are excluded from white-pin evaluation
     const removeItems = indexOfCorrect.reverse();
     removeItems.forEach((element) => {
         ans.splice(element, 1);
@@ -304,7 +304,7 @@ function getGuessResults() {
     gs.sort();
     ans.sort();
 
-    //cerca pin bianchi tra gli elementi rimanenti e rimuove da ans l'elemento se è presente in gs
+    //find white pins among remaining items and remove matched ones from ans
     gs.forEach((element) => {
         if (ans.includes(element)) {
             results.push("white");
@@ -318,18 +318,18 @@ function getGuessResults() {
     indexOfCorrect = [];
 }
 
-// gestisce le consegueze del click su "valuta"
+//handle check button behavior
 function check() {
 
     if (currentAttempt.length === hiddenComb.length) {
 
-        getGuessResults();  //calcolo e coloro i pin di risultato
-        changeRoundPins();  //copio il tentativo attuale nella prima riga libera
-        clearAnswer();      //svuoto la riga tentativo attuale
-        checkWin();         //controllo se la combinazione appena inserita è quella vincente
+        getGuessResults();  //compute and color result pins
+        changeRoundPins();  //copy current guess to the next empty row
+        clearAnswer();      //clear current guess row
+        checkWin();         //check if the current guess wins
 
         if (win || round === rows) {
-            //fermo il gioco e svelo la combinazione
+            //stop the game and reveal the combination
             document.getElementById("check").removeEventListener("click", check);
             hiddenComb.forEach((element, i) => {
                 changePinColor(i + 1, element, "hidden");
@@ -340,14 +340,14 @@ function check() {
                 feedback = "winner";
 
                 if(selectedMode === "competitive"){
-                    //calcolo punteggio
+                    //calculate score
                     if(round === 1) points += (rows*10)+10;
                     else points += ((rows-round+1)*10);
                     
                     const temp = level+1;
                     const temp2 = points;
 
-                    //nuova partita
+                    //new match
                     reset(true);
                     level = temp;
                     points = temp2;
@@ -364,7 +364,7 @@ function check() {
             }
 
             if (selectedMode === "competitive"){
-                // ogni 10 livelli, fino a che non rimangono 5 soli tentativi, viene rimossa una possibilità
+                //every 10 levels, reduce attempts by one until only 5 remain
                 if(((level)%10) === 0 && rows-1 > 5){
                     removeBoard();
                     rows--;
@@ -381,7 +381,7 @@ function check() {
     }
 }
 
-// resetta la partita e quindi la avola di gioco
+//reset the match and board
 function reset(winning) {
     hiddenComb = [];
     currentAttempt = [];

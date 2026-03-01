@@ -1,113 +1,114 @@
 {
-    "single": "Einzelmatch",
-    "compet": "Wettbewerbsmodus",
-    "custom": "Benutzerdefinierter Modus",
-    "rules": "Regeln",
+    "single": "Single Match",
+    "compet": "Competitive Mode",
+    "custom": "Custom Mode",
+    "rules": "Rules",
 
-    "combLabel": "Aktiviere mehrere Instanzen derselben Farbe in der Kombination",
-    "reset": "Neustart",
-    "start": "Spiel starten",
-    "check": "Überprüfen",
-    "clear": "Löschen",
-    "scoreView": "Nach Punkten",
-    "streakView": "Nach Serie",
-    "rowLabel": "Anzahl der Versuche",
-    "columnLabel": "Anzahl der Farben in der Kombination",
-    "case1": "1 richtige Farbe an der richtigen Position",
-    "case2": "1 richtige Farbe an der falschen Position",
+    "combLabel": "Enable multiple instances of the same color in the combination",
+    "reset": "Restart",
+    "start": "Start Game",
+    "check": "Check",
+    "clear": "Clear",
+    "scoreView": "By Score",
+    "streakView": "By Streak",
+    "rowLabel": "Number of Attempts",
+    "columnLabel": "Number of Colors in Combination",
+    "case1": "1 correct color in the right position",
+    "case2": "1 correct color in the wrong position",
+    "case3": "Empty peg: no match",
+    "case4": "Hint pegs order does not indicate position",
 
     
-    "fullRules": "Mastermind ist ein Logikspiel, bei dem traditionell zwei Spieler die Rollen des Codierers und Decodierers abwechseln. Der Codierer wählt und versteckt den geheimen Code, während der Decodierer versucht, ihn zu erraten. In dieser digitalen Version ist der Computer der Codierer, und du übernimmst die Rolle des Decodierers.\n\nDas Ziel des Spiels ist es, den Geheimcode in möglichst wenigen Versuchen zu erraten, der normalerweise aus vier farbigen Stiften besteht. Der Decodierer schlägt Versuche mit farbigen Codes vor, und der Codierer liefert weiße und schwarze Schlüsselstifte für jeden Versuch.\n\nDie Regeln für die Schlüsselstifte sind wie folgt:\n  - Schwarze Stifte zeigen die Farben des Versuchs-Codes an, die sich an der richtigen Stelle im Geheimcode befinden.\n  - Weiße Stifte zeigen Farben im Geheimcode an, die sich jedoch an der falschen Stelle befinden.\n  - Keine Schlüsselstifte für Farben im gespielten Code, die nicht im Geheimcode vorhanden sind.\n\nEs ist wichtig zu beachten, dass weiße und schwarze Stifte nur die Menge der farbigen Stifte im Geheimcode anzeigen, nicht ihre Position. Um Fehler bei wiederholten Farben zu vermeiden, setzt der Codierer zuerst schwarze Stifte und dann weiße Stifte ein und schließt dabei Farben aus, die bereits in den schwarzen Stiften berücksichtigt wurden.",
-    "modesRules": "Spielmodi:\n\n1. **Einzelmatch**:\n  - Anwendung der Mastermind-Regeln auf ein einzelnes Spiel.\n  - Ziel: Den Geheimcode in möglichst wenigen Versuchen erraten.\n  - Anpassungsoption: Sie können die Mehrfachpräsenz derselben Farbe in der Kombination aktivieren (standardmäßig deaktiviert).\n\n2. **Wettbewerbsmodus**:\n  - Steige mit jeder erratenen Kombination auf ein höheres Level auf.\n  - Verdiene Punkte basierend auf der Anzahl der benötigten Versuche zum Erraten.\n  - Das Spiel endet bei der ersten Niederlage.\n  - Alle 10 Level wird die erlaubte Anzahl der Versuche um eins verringert.\n  - Anpassungsfunktion: Die Mehrfachpräsenz derselben Farbe in der Kombination ist bis Level 25 deaktiviert.\n\n3. **Benutzerdefinierter Modus**:\n  - Ermöglicht es den Spielern, anzupassen:\n  - Die Anzahl der erlaubten Versuche.\n  - Die Anzahl der Farben in einer Kombination.\n  - Anpassungsoption: Sie können die Mehrfachpräsenz derselben Farbe in der Kombination aktivieren (standardmäßig deaktiviert).",
-
-
+    "fullRules": "Mastermind is a logic game where traditionally two players take turns in the roles of Codemaker and Codebreaker. The Codemaker chooses and hides the secret code, while the Codebreaker tries to guess it. In this digital version, the computer is the Codemaker, and you take on the role of the Codebreaker.\n\nThe goal of the game is to guess the Secret Code in as few attempts as possible, usually composed of four colored pegs. The Codebreaker proposes attempts with colored codes, and the Codemaker provides white and black Key Pegs for each attempt.\n\nThe rules for Key Pegs are as follows:\n  - Black Pegs indicate the colors of the Code in the correct position.\n  - White Pegs indicate colors present in the Code but in the wrong position.\n  - No Key Pegs for colors not present in the Secret Code.\n\nIt's important to note that White and Black Pegs only indicate the quantity of colored pegs present in the Secret Code, not their position. To avoid errors with repeated colors, the Codemaker places black pegs first and then white pegs, excluding colors already considered in the black pegs.",
+    "modesRules": "Game Modes:\n\n1. **Single Match**:\n  - Application of Mastermind rules to a single game.\n  - Goal: guess the Secret Code in as few attempts as possible.\n  - Customization option: You can enable the presence of multiple instances of the same color in the combination (disabled by default).\n\n2. **Competitive Mode**:\n  - Advance to the next level with each guessed combination.\n  - Earn points based on the number of attempts needed to guess.\n  - The game ends with the first defeat.\n  - Every 10 levels, the allowed number of attempts decreases by one.\n  - Customization feature: The presence of multiple instances of the same color in the combination is disabled until level 25.\n\n3. **Custom Mode**:\n  - Allows players to customize:\n  - The number of allowed attempts.\n  - The number of colors in a combination.\n  - Customization option: You can enable the presence of multiple instances of the same color in the combination (disabled by default).",
+      
     "nameLabel": "Name",
-    "surnameLabel": "Nachname",
-    "emailLabel": "E-Mail",
-    "usernameLabel": "Benutzername",
-    "pwLabel": "Passwort",
-    "cpwLabel": "Passwort bestätigen",
-    "reg": "Registrieren",
+    "surnameLabel": "Surname",
+    "emailLabel": "Email",
+    "usernameLabel": "Username",
+    "pwLabel": "Password",
+    "cpwLabel": "Confirm Password",
+    "reg": "Sign Up",
 
     "levelText": "Level: ",
-    "pointsText": "Punktzahl: ",
+    "pointsText": "Score: ",
 
     "comment": {
-        "newMatch": "Neues Spiel gestartet",
-        "winner": "Wir haben einen Gewinner",
-        "loser": "Lass dich nicht entmutigen, beim nächsten Mal klappt es besser",
-        "wrongAttempt": "Versuche es erneut",
-        "notEnoughCol": "Zu wenige Farben vorhanden",
-        "tooManyCol": "Klicke auf 'Überprüfen'",
-        "waitForStart": "Drücke 'Spiel starten'",
+        "newMatch": "New Game Started",
+        "winner": "We Have a Winner",
+        "loser": "Better luck next time, click 'Restart'",
+        "wrongAttempt": "Try again, you'll be luckier",
+        "notEnoughCol": "Unzureichende Anzahl von Farben",
+        "tooManyCol": "Click 'Check'",
+        "waitForStart": "Press 'Start Game'",
         "void": ""
     },
 
     "position": "Position",
-    "player": "Spieler",
+    "player": "Player",
     "third": {
-        "classic": "Gewinne",
-        "scoreView": "Punkte",
-        "streakView": "Siegesreihe"
+        "classic": "Wins",
+        "scoreView": "Best Score",
+        "streakView": "Wins Streak"
     },
 
     "msg": {
-        "invUsername": "Ungültiger Benutzername",
-        "invPassword": "Ungültiges Passwort",
-        "regInvInput": "Ungültige Daten",
-        "regInvUser": "Benutzername muss zwischen 5 und 20 Zeichen lang sein und darf nur Buchstaben, Zahlen, Punkte oder Unterstriche enthalten",
-        "regInvPass": "Passwort muss zwischen 5 und 20 Zeichen lang sein und darf nur Buchstaben, Zahlen, Punkte oder Unterstriche enthalten",
-        "regInvEmail": "Ungültige E-Mail",
-        "regInvCpw": "Passwörter stimmen nicht überein"
+        "invUsername": "Invalid Username",
+        "invPassword": "Invalid Password",
+        "regInvInput": "Invalid Data",
+        "regInvUser": "Username must be between 5 and 20 characters and can only contain letters, numbers, dots, or underscores",
+        "regInvPass": "Password must be between 5 and 20 characters and can only contain letters, numbers, dots, or underscores",
+        "regInvEmail": "Invalid Email",
+        "regInvCpw": "Passwords do not match"
     },
 
-    "dateLabel": "Du bist seit dabei: ",
-    "glStats": "Gesamtstatistiken",
-    "fmStats": "Statistiken im bevorzugten Modus.",
-    "totVic": "Gesamtsiege",
-    "totMat": "Gesamtspiele",
-    "totPerc": "Gewinnquote",
+    "dateLabel": "You have been a player since: ",
+    "glStats": "Overall Statistics",
+    "fmStats": "Statistics in your preferred mode",
+    "totVic": "Total Wins",
+    "totMat": "Total Matches",
+    "totPerc": "Winning Percentage",
 
-    "favMod": "Lieblingsmodus",
-    "fm_Perc": "Gewinnquote",
+    "favMod": "Favorite Mode",
+    "fm_Perc": "Winning Percentage",
     "fm_totMat": {
-        "comp": "Anzahl der Versuche",
-        "notComp": "Gespielte Spiele"
+        "comp": "Number of Attempts",
+        "notComp": "Games Played"
     },
     "fm_totVic": {
-        "comp": "Beste Serie",
-        "notComp": "Gewonnene Spiele"
+        "comp": "Best Streak",
+        "notComp": "Games Won"
     },
 
-    "globalPos": "globalen Rangliste: ",
+    "globalPos": "Global Leaderboard: ",
 
-    "streak": "Serie",
-    "streakPos": "Rangliste (Siegessträhne): ",
+    "streak": "Streak",
+    "streakPos": "Streak Leaderboard (Consecutive Wins): ",
 
-    "score": "Punktzahl",
-    "scorePos": "Rangliste (Höchstpunktzahl): ",
+    "score": "Score",
+    "scorePos": "Score Leaderboard (Highest Score): ",
 
     "login": {
-        "wrongParam": "Falscher Benutzername oder falsches Passwort",
-        "unexUser": "Benutzername existiert nicht",
-        "unexPass": "Falsches Passwort",
-        "success": "Anmeldung erfolgreich"
+        "wrongParam": "Incorrect Username or Password",
+        "unexUser": "Username does not exist",
+        "unexPass": "Incorrect Password",
+        "success": "Login Successful"
     },
     
     "emptyFavMod": "''",
     
     "registration": {
-        "invName": "Ungültiger Name",
-        "invSurname": "Ungültiger Nachname",
-        "invCpass": "Passwort bestätigen",
-        "alExEmail": "Es existiert bereits ein Konto mit dieser E-Mail",
-        "alExUser": "Benutzername bereits in Verwendung",
-        "success": "Registrierung erfolgreich",
-        "error": "Es scheint ein Problem bei der Registrierung aufgetreten zu sein"
+        "invName": "Invalid Name",
+        "invSurname": "Invalid Surname",
+        "invCpass": "Confirm Password",
+        "alExEmail": "An account already exists with this email",
+        "alExUser": "Username already in use",
+        "success": "Registration successful",
+        "error": "There seems to be an issue with the registration"
     },
     
-    "log": "Anmelden",
-    "cancel": "Schließen",
-    "welcome": "Melde dich bei deinem Konto an",
-    "regNow": "Registrieren"
+    "log": "Log In",
+    "cancel": "Close",
+    "welcome": "Log in to your Account",
+    "regNow": "Sign Up"
 }

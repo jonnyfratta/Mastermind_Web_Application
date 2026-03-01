@@ -67,49 +67,49 @@ document.getElementById("reset").addEventListener("click", function(){
     reset(false);
     start();
 });
-//---------------------------------------------------------------------------ALLOCAZIONE RISORSE-------------------------------------------------------------------------
-const colorChoices = ["red", "blue", "green", "yellow", "purple", "orange"]; //colori selezionabili
-let hiddenComb = [];                     //combinazione segreta
-let currentAttempt = [];                 //risposta corrente
-let indexOfCorrect = [];                 //array che contiene gli indici dei colori giusti nella posizione giusta
+//---------------------------------------------------------------------------RESOURCE ALLOCATION-------------------------------------------------------------------------
+const colorChoices = ["red", "blue", "green", "yellow", "purple", "orange"]; //selectable colors
+let hiddenComb = [];                     //secret combination
+let currentAttempt = [];                 //current guess
+let indexOfCorrect = [];                 //indexes of colors that are correct and in the correct position
 let round = 1;
-let results = [];                        //array che contiene i pin di risultato da colorare
-let feedback;                            //tipo di messaggio mostrato
+let results = [];                        //result pins to color
+let feedback;                            //currently displayed feedback type
 let win;              
-let gameStarted;                         //ricorda se la partita è attualmente attiva oppure no
+let gameStarted;                         //whether a game is currently active
 
 let rows = 10;
 let columns = 4;
-let rws = rows;                          //ricorda il numero di righe totali quando rows viene decrementata
+let rws = rows;                          //store total rows even when rows is decremented
 createBoard(rows, columns);
 
 let allowDuplicates = false;
 
-//modalità competitiva
+//competitive mode
 let level = 1;
 let points = 0;
 
-// Identifica modalità selezionata
+// Identify selected mode
 const urlParams = new URLSearchParams(window.location.search);              
-const selectedMode = urlParams.get('mode');                     //identifica in quale modalità ci troviamo
+const selectedMode = urlParams.get('mode');                     //identify the selected mode
 
-//--------------------------------------------------------------------------FUNZIONI DI UTILITA'-----------------------------------------------------------------------------
+//--------------------------------------------------------------------------UTILITY FUNCTIONS'-----------------------------------------------------------------------------
 
-//si occupa della traduzione di tutto il testo fisso
+//translate all static text
 function handleTranslation(){
     switch(selectedMode){
         case "competitive":
-            translate(["case1", "case2", "scoreView", "streakView","levelText", "pointsText",  "reset", "check", "clear"]);
+            translate(["case1", "case2", "case3", "case4", "scoreView", "streakView","levelText", "pointsText",  "reset", "check", "clear"]);
             translate(["welcome", "usernameLabel", "pwLabel", "log", "reg"], -1, "loginForm");
             break;
     
         case "custom":
-            translate(["case1", "case2", "combLabel", "rowLabel", "columnLabel", "reset", "start", "check", "clear"]);
+            translate(["case1", "case2", "case3", "case4", "combLabel", "rowLabel", "columnLabel", "reset", "start", "check", "clear"]);
             translate(["welcome", "usernameLabel", "pwLabel", "log", "reg"], -1, "loginForm");
             break;
     
         default: 
-            translate(["case1", "case2", "combLabel", "reset", "check", "clear"]);
+            translate(["case1", "case2", "case3", "case4", "combLabel", "reset", "check", "clear"]);
             translate(["welcome", "usernameLabel", "pwLabel", "log", "reg"], -1, "loginForm");
             break; 
     }
@@ -119,7 +119,7 @@ function handleMessage(){
     translate(['comment'], feedback);
 }
 
-//riassegna listener on click ai bottoni di selezione colore
+//re-attach click listeners to color selection buttons
 function reinstateListeners(){
     document.querySelectorAll(".color_button").forEach(function (element) {
         element.addEventListener("click", function (event) {
@@ -150,7 +150,7 @@ function removeElements(parent) {
 
 function recreateBoard(value, what){
     removeBoard();
-    //il parametro what a 0 indica che va cambiato il numero di righe, se invece è a 1 va cambiato il numero di colonne
+    //if `what` is 0 update rows, if 1 update columns
     if(!what){ 
         rows = parseInt(value);
         rws = rows;
@@ -162,15 +162,15 @@ function recreateBoard(value, what){
     reset(false);
 }
 
-//----------------------------------------------------------------------------GESTIONE SCHERMATA-------------------------------------------------------------------------
+//----------------------------------------------------------------------------SCREEN HANDLING-------------------------------------------------------------------------
 if(selectedMode === "custom"){
-    //caso in cui venga cambiato il numero di righe
+    //when the row count changes
     document.getElementById("rows").addEventListener("change", function () {
         if(round === 1 || !gameStarted){
             recreateBoard(parseInt(this.value), 0);
         }
         else{
-            //la partita è già iniziata da più di un turno, si chiede all'utente il permesso di resettare la tabella
+            //the game has already started; ask the user to confirm resetting the board
             const message = getAlert(0); 
             const confirmation = window.confirm(message);
             if (confirmation) {
@@ -181,7 +181,7 @@ if(selectedMode === "custom"){
         }
     });
     
-    //caso in cui venga cambiato il numero di colonne
+    //when the column count changes
     document.getElementById("columns").addEventListener("change", function () {
         if(round === 1 || !gameStarted){
             recreateBoard(parseInt(this.value), 1);
@@ -203,34 +203,36 @@ if(selectedMode === "custom"){
         const choice = document.querySelector('.choice');
 
         if (!chart.classList.contains('clicked')) {
-            //la classifica è nascosta e va mostrata
+            //leaderboard is hidden and should be shown
             leaderboard.style.opacity = '1';
             leaderboard.style.visibility = 'visible';
             chart.classList.add('clicked');
             
             if(selectedMode === 'competitive'){
-                //mostro anche i tasti di selezione classifica
+                //show leaderboard selection tabs as well
+                choice.style.display = 'flex';
                 choice.style.opacity = '1';
                 choice.style.visibility = 'visible';
             }
         }
         else {
-            //la classifica è mostrata e va nascosta
+            //leaderboard is visible and should be hidden
             leaderboard.style.opacity = '0';
             leaderboard.style.visibility = 'hidden';
             chart.classList.remove('clicked');
 
             if(selectedMode === 'competitive'){
-                //nascondo anche i tasti di selezione classifica
+                //hide leaderboard selection tabs as well
                 choice.style.opacity = '0';
                 choice.style.visibility = 'hidden';
+                choice.style.display = 'none';
             }
         }
     });
 }
 
 if(selectedMode !== "competitive"){
-    //se non sono in competitiva abilito pulsante per presenza multipla colori
+    //outside competitive mode, enable the duplicate-colors toggle
     const comb = document.getElementById("combinations");
     comb.addEventListener("change", function(){
         if(round === 1)
@@ -252,26 +254,26 @@ if(selectedMode !== "competitive"){
         }
     });
 }else{
-    //in competitiva invece lo abilito automaticamente 
+    //in competitive mode, enable it automatically 
     if(level >= 25) 
         allowDuplicates = true;
 }
 
-//------------------------------------------------------------------------------GESTIONE BOARD----------------------------------------------------------------------------
+//------------------------------------------------------------------------------BOARD HANDLING----------------------------------------------------------------------------
 function removeBoard() {
-    // Rimuovo la combinazione da indovinare
+    //remove the hidden combination row
     const hidden = document.getElementById("hidden");
     removeElements(hidden);
 
-    // Rimuovo gli elementi dal corpo centrale
+    //remove elements from the central body
     const box = document.getElementById("box");
     removeElements(box);
 
-    // Rimuovo la riga della risposta corrente (ultima in basso)
+    //remove the current guess row (bottom row)
     const current = document.getElementById("current");
     removeElements(current);
 
-    // Rimuovo i pulsanti di selezione colore
+    //remove color selection buttons
     const colorButtons = document.querySelectorAll('.color_button');
     colorButtons.forEach(function (button) {
         button.remove();
@@ -279,17 +281,17 @@ function removeBoard() {
 }
 
 function createBoard (rows, columns){    
-    //creazione prima riga
+    //create first row
     createRow(rows+1, rows, columns);
 
-    //creazione corpo centrale (tentativi)
+    //create central body (attempts)
     for (let i = rows-1; i >= 0; i--)
         createRow(i+1, rows, columns);
 
-    //creazione ultima riga
+    //create last row
     createRow(0, rows, columns);
 
-    //gestisco styling dei tentativi
+    //set attempts styling
     const elPinContainer = document.querySelectorAll(".attempt");
     elPinContainer.forEach(function(element) {
         element.style.gridTemplateColumns = 'repeat(' + columns + ', 1fr)';
@@ -298,7 +300,7 @@ function createBoard (rows, columns){
         element.style.borderBottom = "1px dashed #d7b791";
     });
 
-    //gestisco styling dei risultati
+    //set results styling
     const elAnsContainer = document.querySelectorAll(".outcome");
     elAnsContainer.forEach(function(element) {
         element.style.gridTemplateColumns = 'repeat(' + (columns/2) + ', 1fr)';
@@ -307,7 +309,7 @@ function createBoard (rows, columns){
         }
     });
 
-    //sistemo il selettore di colori su due righe e 3 colonne
+    //set the color selector to 2 rows and 3 columns
     const colors = document.getElementById("color_selection");
     colors.style.gridTemplateColumns = 'repeat(3, 1fr)';
     colors.style.gridTemplateRows = 'repeat(2, 1fr)';
@@ -315,62 +317,62 @@ function createBoard (rows, columns){
 
 function createRow(i, rows, columns){
     if(i === rows+1){
-        //crea riga combinazione da indovinare
-        const combinazione = document.getElementById('hidden');
-        combinazione.parentElement.classList.add("row");
+        //create hidden combination row
+        const hiddenCombination = document.getElementById('hidden');
+        hiddenCombination.parentElement.classList.add("row");
 
         for (let j = 0; j < columns; j++){
             const p = createPin(i, rows, j, 0);
-            combinazione.appendChild(p);
+            hiddenCombination.appendChild(p);
         }
         return;
     }else if (!i){
-        //crea riga risposta corrente
-        const risposta = document.getElementById('current');
-        risposta.parentElement.classList.add("row");
+        //create current guess row
+        const currentGuessRow = document.getElementById('current');
+        currentGuessRow.parentElement.classList.add("row");
 
         for (let j = 0; j < columns; j++) {
             const p = createPin(i, rows, j, 0);
             p.id = String(j+1);
-            risposta.appendChild(p);
+            currentGuessRow.appendChild(p);
         }
 
-        //crea slot selezione colori
-        const selezione = document.getElementById('color_selection');
+        //create color selection slots
+        const colorSelection = document.getElementById('color_selection');
         for (let c of colorChoices){
             const q = document.createElement("button");
             q.className = 'color_button';
             q.id = c;
-            selezione.appendChild(q);
+            colorSelection.appendChild(q);
         }
         return;
     }
 
-    //box centrale
+    //central box
     const bodyRow = document.getElementById("box");
 
     const rw = document.createElement("tr");
     rw.classList.add('row');
 
-    //sinistra
+    //left side
     const container = document.createElement("td");
     container.classList.add('attempt');
     container.id = 'bet' + i
     rw.appendChild(container);
 
-    //crea pallini sinistra
+    //create left pins
     for (let j = 0; j < columns; j++) {
         const p = createPin(i, rows, j, 0);
         container.appendChild(p);
     }
 
-    //destra
+    //right side
     const container2 = document.createElement("td");
     container2.classList.add('outcome');
     container2.id = 'hint' + i;
     rw.appendChild(container2);
 
-    //crea pallini piccoli a destra
+    //create small right pins
     for (let j = 0; j < columns; j++) {
         const p = createPin(i, rows, j, 1);
         container2.appendChild(p);
@@ -379,16 +381,16 @@ function createRow(i, rows, columns){
     bodyRow.appendChild(rw);
 }
 
-//Parametri: i(numero di riga decrescente),
-//           rows(numero di righe della board)
-//           j(numero colonna corrente)
-//           lato(0 = sinistra, 1 = destra)
-function createPin(i, rows, j, lato){
-    if(!lato){
+//Parameters: i (descending row index),
+//            rows (total board rows),
+//            j (current column index),
+//            side (0 = left, 1 = right)
+function createPin(i, rows, j, side){
+    if(!side){
         const big = document.createElement("div");
         big.className = 'big_pin';
         
-        //tutte le righe tranne quella di risposta sono identificate dall'id del primo pallino
+        //all rows except current guess are identified by their first pin id
         if(!j && i !== rows+1) big.id = 'b' + i;
         return big;
     }

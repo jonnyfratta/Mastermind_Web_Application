@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $subDate = date("d-M-Y", strtotime($subDate));
 
 
-    //Totale Vittorie
+    //Total wins
     $query = $query = "SELECT SUM(level) AS tot 
                        FROM `match` 
                        WHERE player = :username 
@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $record = $com->fetch(PDO::FETCH_ASSOC);
     $totVic = ($record["tot"]) ? $record['tot'] : 0;
 
-    //Totale Partite
+    //Total matches
     $query = "SELECT SUM(level) AS tot 
               FROM `match` 
               WHERE player = :username";
@@ -60,11 +60,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $totMat = ($record['tot']) ? $record['tot'] : 0;
 
 
-    //Totale Percentuale
+    //Total percentage
     $totPerc = ($totMat) ? round(($totVic*100)/$totMat, 1) : 0;
 
 
-    //Modalità perferita
+    //Favorite mode
     $query = "SELECT mode, SUM(level) AS modeCount 
               FROM `match` 
               WHERE player = :username 

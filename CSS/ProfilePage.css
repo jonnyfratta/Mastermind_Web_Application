@@ -1,5 +1,5 @@
 #return{
-  background-image: url(../PNG/ICONE/ICONE-01.png);
+  background-image: url(../PNG/ICONS/ICONS-01.png);
   background-size: cover;
   background-position: center;
   width: 42px;
@@ -7,20 +7,20 @@
 }
 #return:hover{
   cursor: pointer;
-  background-image: url(../PNG/ICONE/ICONE-03.png);
+  background-image: url(../PNG/ICONS/ICONS-03.png);
 }
 #return.clicked {
-  background-image: url(../PNG/ICONE/ICONE-03.png);
+  background-image: url(../PNG/ICONS/ICONS-03.png);
 }
 
 #user{
   font-family: 'Comic Neue', cursive;
-  font-size: 25pt;
+  font-size: clamp(1.3rem, 3.5vw, 2.1rem);
   font-weight: 700;
 }
 
 #logout{
-  background-image: url(../PNG/ICONE/ICONE-11.png);
+  background-image: url(../PNG/ICONS/ICONS-11.png);
   background-size: cover;
   background-position: center;
   width: 42px;
@@ -28,11 +28,11 @@
 }
 #logout:hover{
   cursor: pointer;
-  background-image: url(../PNG/ICONE/ICONE-12.png);
+  background-image: url(../PNG/ICONS/ICONS-12.png);
 }
 
 body{
-  background-image: url(../PNG/GRAFICHE/PROFILO.png);
+  background-image: url(../PNG/GRAPHICS/PROFILE.png);
   background-position: top center;
   background-size: cover;
   display: flex;
@@ -42,15 +42,16 @@ body{
 
 main{
   margin-top: 1rem;
-  width: 50rem;
-  height: 31.7rem;
+  width: min(50rem, 96vw);
+  min-height: 31.7rem;
   display: grid;
-  grid-template-columns: 9rem 35rem;
+  grid-template-columns: minmax(120px, 9rem) minmax(0, 1fr);
   grid-template-rows: 0.15fr 1fr;
+  padding: 0 0.4rem 1rem;
 }
 .since{
   grid-column: span 2;
-  margin-left: 5rem;
+  margin-left: 0;
   justify-self: center;
   height: 20px;
 }
@@ -115,7 +116,7 @@ main{
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
 
-  margin-left: 8rem;
+  margin-left: clamp(0.4rem, 3vw, 4rem);
 }
 
 #VT, #FM{
@@ -124,18 +125,18 @@ main{
 
 #VT{
   margin-top: 2.7rem;
-  margin-left: 5rem;
+  margin-left: 0;
   height: 11.3rem;
-  width: 60%;
+  width: min(430px, 100%);
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 0.55fr 0.95fr 0.75fr 1.4fr;
 }
 #FM{
-  margin-top: 3.2rem;
-  margin-left: 2rem;
+  margin-top: 2rem;
+  margin-left: 0;
   height: 11rem;
-  width: 85%;
+  width: min(520px, 100%);
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 0.6fr 0.95fr 0.75fr 0.8fr 0.5fr;
@@ -161,10 +162,10 @@ main{
   margin-top: 0.6rem;
 }
 
-#statBox0, 
+#statBox0,
 #statBox1,
 #statBox2,
-#statBox3, 
+#statBox3,
 #statBox4,
 #statBox5,
 #statBox6{
@@ -177,4 +178,67 @@ main{
   font-family: 'Comic Neue', cursive;
   font-size: 12pt;
   font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  main{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 0.8rem;
+    min-height: auto;
+  }
+
+  .since{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: auto;
+  }
+
+  .pos{
+    width: 100%;
+    margin-left: 0;
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    grid-template-rows: auto;
+    gap: 0.8rem;
+  }
+
+  #comp{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    grid-template-rows: auto auto;
+  }
+
+  #streak,
+  #score{
+    margin-top: 0;
+  }
+
+  .stats{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    margin-left: 0;
+    gap: 0.8rem;
+  }
+
+  #VT,
+  #FM{
+    margin-top: 0;
+    width: 100%;
+    height: auto;
+    padding: 0.4rem 0.2rem;
+  }
+
+  #fmStats{
+    margin-left: 0;
+  }
+
+  #statBox0,
+  #statBox1,
+  #statBox2,
+  #statBox3,
+  #statBox4,
+  #statBox5,
+  #statBox6{
+    margin-left: 0;
+  }
 }

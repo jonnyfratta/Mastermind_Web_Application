@@ -20,7 +20,7 @@ document.getElementById("compet").addEventListener("click", function(){window.lo
 document.getElementById("custom").addEventListener("click", function(){window.location.href = "Custom.php?mode=custom";});
 document.getElementById("rules").addEventListener("click", function(){window.location.href = "Rules.php?mode=rules";});
 
-//--------------------------------------------------------------------------FUNZIONI DI UTILITA'-----------------------------------------------------------------------------
+//--------------------------------------------------------------------------UTILITY FUNCTIONS'-----------------------------------------------------------------------------
 function handleTranslation(){
     translate(["single", "compet", "custom", "rules"]);
     translate(["welcome", "usernameLabel", "pwLabel", "log", "reg"], -1, "loginForm");

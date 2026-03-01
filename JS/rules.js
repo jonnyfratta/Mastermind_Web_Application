@@ -15,7 +15,7 @@ document.getElementById("langMod").addEventListener("click", function(event){
 
 document.getElementById("return").addEventListener("click", function(){window.location.href = "index.php";});
 
-//--------------------------------------------------------------------------FUNZIONI DI UTILITA'-----------------------------------------------------------------------------
+//--------------------------------------------------------------------------UTILITY FUNCTIONS'-----------------------------------------------------------------------------
 function handleTranslation(){
     translate(["fullRules", "modesRules"]);
     translate(["welcome", "usernameLabel", "pwLabel", "log", "reg"], -1, "loginForm");

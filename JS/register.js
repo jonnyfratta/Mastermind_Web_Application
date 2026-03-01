@@ -1,4 +1,4 @@
-//---------------------------------------------------------------------------ALLOCAZIONE RISORSE-------------------------------------------------------------------------
+//---------------------------------------------------------------------------RESOURCE ALLOCATION-------------------------------------------------------------------------
 let feedback;
 const urlParams = new URLSearchParams(window.location.search);
 const ret = urlParams.get('return');
@@ -21,9 +21,9 @@ document.getElementById("langMod").addEventListener("click", function(event){
   translate(['msg'], feedback);
 });
 
-//---------------------------------------------------------------------------FUNZIONI DI UTILITA'-----------------------------------------------------------------------------
+//---------------------------------------------------------------------------UTILITY FUNCTIONS'-----------------------------------------------------------------------------
 
-//identifico pagina di ritorno
+//identify return page
 function comeback(){
   switch(ret){
     case "1":
@@ -48,10 +48,10 @@ function comeback(){
   }
 }
 
-//------------------------------------------------------------------------------GESTIONE REGISTRAZIONE----------------------------------------------------------------------------
+//------------------------------------------------------------------------------REGISTRATION HANDLING----------------------------------------------------------------------------
 let form2 = document.getElementById('regForm');
 form2.addEventListener("submit", function(element){
-    element.preventDefault(); //evito comportamento default: refresh pagina
+    element.preventDefault(); //prevent default behavior: page refresh
 
     const rExp = /^[\w.]{5,20}$/; // /^[a-zA-Z0-9_.]{5,20}$/;
     const e_rExp = /^\S+@\S+\.\S+$/; //qualcosa@qualcosa.qualcosa
@@ -112,15 +112,14 @@ form2.addEventListener("submit", function(element){
         .then(response => response.json())
         .then(data => {
             if(!data['outcome']){
-              //caso registrazione fallita
+              //registration failed case
                 err.style.display = "block";
                 err.innerHTML = data['message'];
             }
             else{
-              //pagina precedente
+              //previous page
               comeback();
             }
         })
     }
 })
-

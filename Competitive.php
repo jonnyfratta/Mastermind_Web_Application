@@ -8,23 +8,23 @@ $_SESSION["mode"] = 2;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mastermind</title>
     
-    <!-- preso da Google Fonts -->
+    <!-- from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <!---->
 
-    <!-- Preso da internet -->
+    <!-- from the web -->
     <link rel="stylesheet" href="CSS/meyer.css">
     <!---->
 
     <link rel="stylesheet" href="CSS/header.css">
     <link rel="stylesheet" href="CSS/loginPage.css">
     <link rel="stylesheet" href="CSS/language.css">
-    <link rel="stylesheet" href="CSS/gameScreen.css">
+    <link rel="stylesheet" href="CSS/GameScreen.css">
     <link rel="stylesheet" href="CSS/competitiveScreen.css">
 </head>
-<body> 
+<body>
     <header>
         <div id="return"></div>
         <div id="chart"></div>
@@ -51,7 +51,7 @@ $_SESSION["mode"] = 2;
     <script src="JS/cookie.js"></script>
     <script src="JS/language.js"></script>
     <script src="JS/login.js"></script>
-    <?php include 'PHP/Alloc/listnerAlloc.php'?>
+    <?php include 'PHP/Alloc/listenerAlloc.php'?>
     <script src="JS/allocation.js"></script>
     <script src="JS/leaderboard.js"></script>
     <script src="JS/game.js"></script>
