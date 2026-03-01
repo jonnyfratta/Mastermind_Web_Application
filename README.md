@@ -5,6 +5,8 @@ This is a web replica of the Mastermind game i've developed for a course in Univ
 
 Mastermind is a logic game where you have to guess a randomly generated color sequence. In this web version, you can challenge yourself in three different modes.
 
+![Screenshot](PNG/Demo.png)
+
 ## Installation and Run Locally
 1. Clone the repository:
     ```sh
